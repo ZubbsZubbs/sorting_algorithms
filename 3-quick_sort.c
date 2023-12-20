@@ -1,8 +1,8 @@
 #include "sort.h"
 /**
 * my_swap - swap two int
-* @a: int
-* @b: int
+* @x: int
+* @y: int
 * Return: (void) Swaped int
 */
 void my_swap(int *x, int *y)

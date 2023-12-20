@@ -1,7 +1,7 @@
 #include "sort.h"
 /**
 * my_locate_min - Locatin the min From Current index in the array
-* @array: The Array to be Searched
+* @arr: The Array to be Searched
 * @index: Starting Index of The Search
 * @size: The Size of The Array
 * Return: (int) index of min if found or
@@ -26,7 +26,7 @@ return (-1);
 return (idx_min);
 }
 /**
-* my_selection_sort - Implementation of selection Sort Algrithm
+* selection_sort - Implementation of selection Sort Algrithm
 * @array: Array to sort type int *
 * @size: The Size of The Given Array
 *

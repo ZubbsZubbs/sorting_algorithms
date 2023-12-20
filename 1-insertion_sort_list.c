@@ -2,8 +2,8 @@
 /**
 * my_swap - swap 2 element in an list
 * @head: head of list
-* @a: node
-* @b: node
+* @x: node
+* @y: node
 */
 void my_swap(listint_t *x, listint_t *y, listint_t **head)
 {
