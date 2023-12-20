@@ -26,7 +26,7 @@ print_array(array, size);
 }
 
 /**
-* count_sort_LSD - count sort with LSD
+* my_count_sort_LSD - count sort with LSD
 * @array: array to sort
 * @size: size of the array
 * @lsd: least significant digit

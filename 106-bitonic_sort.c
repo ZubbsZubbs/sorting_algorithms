@@ -17,7 +17,7 @@ tmp = *l;
 }
 
 /**
-* b_merge - bitonic merge
+* t_merge - bitonic merge
 * @array: Array slice being merged
 * @low: lowest index
 * @count: Count of slice
@@ -44,7 +44,7 @@ t_merge(array, low + n, n, dir, size);
 }
 
 /**
-* b_sort - bitonic recursive sort
+* the_b_sort - bitonic recursive sort
 * @array: array to sort
 * @low: lowest index
 * @count: Count of slice
