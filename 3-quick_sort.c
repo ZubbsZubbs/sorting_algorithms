@@ -51,7 +51,7 @@ void my_lomuto_qsort(int *array, int low, int high, size_t size)
     int x;
     if (low < high)
     {
-        x = partition(array, low, high, size);
+        x = my_partition(array, low, high, size);
         my_lomuto_qsort(array, low, x - 1, size);
         my_lomuto_qsort(array, x + 1, high, size);
     }

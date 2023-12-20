@@ -38,13 +38,13 @@ void selection_sort(int *array, size_t size)
     int mini, tmp;
     for (x = 0; x < (int)size; x++)
     {
-        mini = locate_min(array, x, size);
+        mini = my_locate_min(array, x, size);
         if (mini != -1)
         {
             tmp = array[x];
             array[x] = array[mini];
             array[mini] = tmp;
-            print_array(arr, size);
+            print_array(array, size);
         }
     }
 }
