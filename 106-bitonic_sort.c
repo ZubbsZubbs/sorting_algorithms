@@ -65,9 +65,9 @@ void the_b_sort(int *array, int low, int count, int dir, size_t size)
 		else
 			printf("(DOWN):\n");
 		print_array(array + low, count);
-		b_sort(array, low, n, 1, size);
-		b_sort(array, low + n, n, 0, size);
-		b_merge(array, low, count, dir, size);
+		the_b_sort(array, low, n, 1, size);
+		the_b_sort(array, low + n, n, 0, size);
+		t_merge(array, low, count, dir, size);
 		printf("Result [%d/%d] ", count, (int)size);
 		if (dir == 1)
 			printf("(UP):\n");
