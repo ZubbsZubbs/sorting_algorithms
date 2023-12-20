@@ -9,11 +9,11 @@
 
 void my_swapint(int *l, int *r)
 {
-	int tmp;
+int tmp;
 
-	tmp = *l;
-	*l = *r;
-	*r = tmp;
+tmp = *l;
+*l = *r;
+*r = tmp;
 }
 
 /**
@@ -27,20 +27,20 @@ void my_swapint(int *l, int *r)
 
 void t_merge(int *array, int low, int count, int dir, size_t size)
 {
-	int k, n;
+int k, n;
 
-	if (count > 1)
-	{
-		n = count / 2;
-		for (k = low; k < low + n; k++)
-		{
-			if (((array[k] > array[k + n]) && dir == 1) ||
-			(dir == 0 && (array[k] < array[k + n])))
-				my_swapint(&array[k], &array[k + n]);
-		}
-		t_merge(array, low, n, dir, size);
-		t_merge(array, low + n, n, dir, size);
-	}
+if (count > 1)
+{
+n = count / 2;
+for (k = low; k < low + n; k++)
+{
+if (((array[k] > array[k + n]) && dir == 1) ||
+(dir == 0 && (array[k] < array[k + n])))
+my_swapint(&array[k], &array[k + n]);
+}
+t_merge(array, low, n, dir, size);
+t_merge(array, low + n, n, dir, size);
+}
 }
 
 /**
@@ -54,27 +54,27 @@ void t_merge(int *array, int low, int count, int dir, size_t size)
 
 void the_b_sort(int *array, int low, int count, int dir, size_t size)
 {
-	int n;
+int n;
 
-	if (count > 1)
-	{
-		n = count / 2;
-		printf("Merging [%d/%d] ", count, (int)size);
-		if (dir == 1)
-			printf("(UP):\n");
-		else
-			printf("(DOWN):\n");
-		print_array(array + low, count);
-		the_b_sort(array, low, n, 1, size);
-		the_b_sort(array, low + n, n, 0, size);
-		t_merge(array, low, count, dir, size);
-		printf("Result [%d/%d] ", count, (int)size);
-		if (dir == 1)
-			printf("(UP):\n");
-		else
-			printf("(DOWN):\n");
-		print_array(array + low, count);
-	}
+if (count > 1)
+{
+n = count / 2;
+printf("Merging [%d/%d] ", count, (int)size);
+if (dir == 1)
+printf("(UP):\n");
+else
+printf("(DOWN):\n");
+print_array(array + low, count);
+the_b_sort(array, low, n, 1, size);
+the_b_sort(array, low + n, n, 0, size);
+t_merge(array, low, count, dir, size);
+printf("Result [%d/%d] ", count, (int)size);
+if (dir == 1)
+printf("(UP):\n");
+else
+printf("(DOWN):\n");
+print_array(array + low, count);
+}
 }
 
 /**
@@ -85,7 +85,7 @@ void the_b_sort(int *array, int low, int count, int dir, size_t size)
 
 void bitonic_sort(int *array, size_t size)
 {
-	if (array == NULL || size < 2)
-		return;
-	the_b_sort(array, 0, size, 1, size);
+if (array == NULL || size < 2)
+return;
+the_b_sort(array, 0, size, 1, size);
 }
